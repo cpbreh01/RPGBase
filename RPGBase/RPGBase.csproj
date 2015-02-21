@@ -44,6 +44,7 @@
     <Compile Include="Classes\ArmorClass.cs" />
     <Compile Include="Classes\Attack.cs" />
     <Compile Include="Classes\Character.cs" />
+    <Compile Include="Classes\Effect.cs" />
     <Compile Include="Classes\Skills.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
