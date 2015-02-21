@@ -43,6 +43,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Classes\ArmorClass.cs" />
     <Compile Include="Classes\Attack.cs" />
+    <Compile Include="Classes\Attribute.cs" />
     <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\Effect.cs" />
     <Compile Include="Classes\Save.cs" />

@@ -11,9 +11,16 @@ namespace RPGBase.Classes
         public AttributeType KeyAbility;
         public int Rank;
 
-        public int CalculateSkillModifer(int AttributeModifer)
+        public int CalculateSkillModifer(int AttributeModifer, int MiscellaneousMod)
         {
-            return AttributeModifer + Rank + 
+            return AttributeModifer + Rank + MiscellaneousMod;
+        }
+
+        public Skill(string _Name, AttributeType _KeyAbility, int _Rank)
+        {
+            SkillName = _Name;
+            KeyAbility = _KeyAbility;
+            Rank = _Rank;
         }
 
     }

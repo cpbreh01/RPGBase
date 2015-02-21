@@ -14,12 +14,22 @@ namespace RPGBase.Classes
         private int speed;
         private Alignment characterAlignment;
 
-        public Attribute CharacterAttributes;
+        //TODO: Create Level Class
+
+        public Attribute Strength;
+        public Attribute Dexterity;
+        public Attribute Constitution;
+        public Attribute Intelligence;
+        public Attribute Charisma;
+        public Attribute Wisdom;
 
         public ArmorClass CharacterArmorClass;
         public Save Fortitude;
         public Save Reflex;
         public Save Will;
+
+        List<Skill> Skills = new List<Skill>();
+
 
 
 
@@ -60,48 +70,6 @@ namespace RPGBase.Classes
 
     enum AttributeType { Int = "Intelligence", Dex = "Dexterity", Con = "Constitution", Cha = "Charisma", Wis = "Wisdom", Str = "Strength" };
 
-    public class Attribute
-    {
-        //Base Attributes
-        private int constitution;
-        private int dexterity;
-        private int charisma;
-        private int strength;
-        private int wisdom;
-        private int intelligence;
-
-        //Other Properties
-        public int Constitution
-        {
-            get { return constitution; }
-            set { constitution = value; }
-        }
-        public int Dexterity
-        {
-            get { return dexterity; }
-            set { dexterity = value; }
-        }
-        public int Charisma
-        {
-            get { return charisma; }
-            set { charisma = value; }
-        }
-        public int Strength
-        {
-            get { return strength; }
-            set { strength = value; }
-        }
-        public int Wisdom
-        {
-            get { return wisdom; }
-            set { wisdom = value; }
-        }
-        public int Intelligence
-        {
-            get { return intelligence; }
-            set { intelligence = value; }
-        }
-    }
 
     public class MiscModifer
     {
