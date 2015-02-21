@@ -5,7 +5,16 @@ using System.Text;
 
 namespace RPGBase.Classes
 {
-    class Skills
+    public class Skill
     {
+        public string SkillName;
+        public AttributeType KeyAbility;
+        public int Rank;
+
+        public int CalculateSkillModifer(int AttributeModifer)
+        {
+            return AttributeModifer + Rank + 
+        }
+
     }
 }

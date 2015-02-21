@@ -7,23 +7,22 @@ namespace RPGBase.Classes
 {
     public class Character
     {
-        //Note int is an unsigned
-
         private string name;
         private string race;
         private int hitPoints;
         private int initative;
         private int speed;
-        private ArmorClass characterArmorClass;
-        public Attribute characterAttributes;
         private Alignment characterAlignment;
 
-        //public Character(string _Name, string _Race, string _BaseHp, int _Initative, int  )
-        //{
+        public Attribute CharacterAttributes;
 
-        //}
+        public ArmorClass CharacterArmorClass;
+        public Save Fortitude;
+        public Save Reflex;
+        public Save Will;
 
-        //To do: Determine which properties in this list need to be readonly. (i.e. only set in object creation or through methods.)
+
+
         #region Properties
 
             public string Name
@@ -35,16 +34,6 @@ namespace RPGBase.Classes
             {
                 get { return race; }
             }
-            public Alignment CharacterAlignment
-            {
-                get { return characterAlignment; }
-                set { characterAlignment = value; }
-            }
-            public int Speed
-            {
-                get { return speed; }
-                set { speed = value; }
-            }
             public int HitPoints
             {
                 get { return hitPoints; }
@@ -55,16 +44,21 @@ namespace RPGBase.Classes
                 get { return initative; }
                 set { initative = value; }
             }
-
-            internal ArmorClass CharacterArmorClass
+            public int Speed
             {
-                get { return characterArmorClass; }
-                set { characterArmorClass = value; }
+                get { return speed; }
+                set { speed = value; }
+            }
+            public Alignment CharacterAlignment
+            {
+                get { return characterAlignment; }
+                set { characterAlignment = value; }
             }
 
-    #endregion
-
+        #endregion
     }
+
+    enum AttributeType { Int = "Intelligence", Dex = "Dexterity", Con = "Constitution", Cha = "Charisma", Wis = "Wisdom", Str = "Strength" };
 
     public class Attribute
     {
@@ -74,7 +68,7 @@ namespace RPGBase.Classes
         private int charisma;
         private int strength;
         private int wisdom;
-        private int intellegence;
+        private int intelligence;
 
         //Other Properties
         public int Constitution
@@ -102,25 +96,26 @@ namespace RPGBase.Classes
             get { return wisdom; }
             set { wisdom = value; }
         }
-        public int Intellegence
+        public int Intelligence
         {
-            get { return intellegence; }
-            set { intellegence = value; }
-        }
-
-        public void GenerateModifiers()
-        {
-
+            get { return intelligence; }
+            set { intelligence = value; }
         }
     }
 
+    public class MiscModifer
+    {
+        string ModifierName;
+
+        //Base Attributes
+        private int constitutionMod;
+        private int dexterityMod;
+        private int charismaMod;
+        private int strengthMod;
+        private int wisdomMod;
+        private int intelligenceMod;
+
+    }
 
     enum Alignment {LawfulGood,NeutralGood,ChaoticGood,LawfulNeutral,TrueNeutral,ChaoticNeutral,LawfulEvil,NeutralEvil,ChaoticEvil}
-
-    
-
-    class Skills
-    {
-        string SkillName;
-    }
 }
