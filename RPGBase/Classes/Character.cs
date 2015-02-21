@@ -117,12 +117,6 @@ namespace RPGBase.Classes
 
     enum Alignment {LawfulGood,NeutralGood,ChaoticGood,LawfulNeutral,TrueNeutral,ChaoticNeutral,LawfulEvil,NeutralEvil,ChaoticEvil}
 
-    class Attack
-    {
-        int AttackModifier;
-        int Damage;
-        //To Do add effects
-    }
     
 
     class Skills
