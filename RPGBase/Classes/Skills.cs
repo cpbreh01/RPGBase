@@ -5,6 +5,11 @@ using System.Text;
 
 namespace RPGBase.Classes
 {
+
+    //ToDo implement a way to use an untrained skill (aka: Ability Check)
+    //When you do this you compare the characters related ability
+    //Some skills cannot be used untrained. We may want to add a Boolean value to indicate this.
+
     public class Skill
     {
         public string SkillName;

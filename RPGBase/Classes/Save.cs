@@ -5,10 +5,10 @@ using System.Text;
 
 namespace RPGBase.Classes
 {
-    enum ThrowModifiersClassification {Base, AbilityModifier, MagicModifier, MiscModifier, TemporaryModifer};
-    enum ThrowModiferType {Fortitude, Reflex, Will };
+    public enum ThrowModifiersClassification {Base, AbilityModifier, MagicModifier, MiscModifier, TemporaryModifer};
+    public enum ThrowModiferType {Fortitude, Reflex, Will };
 
-    class Save
+    public class Save
     {
         public ThrowModiferType Type;
         public List<SaveModifier> ModifierList;
@@ -29,7 +29,7 @@ namespace RPGBase.Classes
         }
     }
 
-    class SaveModifier
+    public class SaveModifier
     {
         public ThrowModiferType SavModType;
         public ThrowModifiersClassification SavModClassification;

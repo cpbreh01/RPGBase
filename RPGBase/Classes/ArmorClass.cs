@@ -5,10 +5,12 @@ using System.Text;
 
 namespace RPGBase.Classes
 {
-    enum ArmorModTypes { ArmorBonus, ShieldBonus, DexModifier, SizeModifier, NaturalArmor, DeflectionModifier, Micellaneous }
+    //You armor class is how hard your character is to hit.
+
+    public enum ArmorModTypes { ArmorBonus, ShieldBonus, DexModifier, SizeModifier, NaturalArmor, DeflectionModifier, Micellaneous }
 
 
-    class ArmorClass
+    public class ArmorClass
     {
         const int baseArmor = 10;
         List<ArmorModifiers> ACMods = new List<ArmorModifiers>();
@@ -29,7 +31,7 @@ namespace RPGBase.Classes
         }
     }
 
-    class ArmorModifiers{
+    public class ArmorModifiers{
         public ArmorModTypes type; //include Dex, Armor,
         public string typeName;
         public int    value;

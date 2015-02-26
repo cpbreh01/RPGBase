@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RPGBase.Classes
 {
-    class Attribute
+    public class Attribute
     {
         public string AttributeName;
         public AttributeType AttributeType;
@@ -39,7 +39,7 @@ namespace RPGBase.Classes
         }
     }
 
-    class AttributeScoreModifier
+    public class AttributeScoreModifier
     {
         public string ModifierName;
         public int ModifierValue;
