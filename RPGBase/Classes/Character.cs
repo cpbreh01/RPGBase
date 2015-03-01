@@ -18,7 +18,7 @@ namespace RPGBase.Classes
     public class Character
     {
         private string name;
-        private int age;                            //Added 2-25-15
+        private int age;                            //Added 2-25-15 - Age depending on Race effects certain Attributes.
         private string gender;                      //Added 2-25-15
         private string race;
         private int hitPoints;                      //Class Base + Constitution modifier.
@@ -28,8 +28,10 @@ namespace RPGBase.Classes
 
         //TODO: Create Level Class
             //Apparently every 4th level allows you to add 1 point to any attribute.
-        //TODO: Figure out how to track ATTACK BONUS - this is determined by Class Base + Strength modifer
+            //Every level results in your rolling a "Hit die" to determine how many hit points you gain.
+        //TODO: Figure out how to track ATTACK BONUS - this is determined by Class Base + Strength modifier
 
+        //Instead of having Attributes listed separately, it may be better to have them contained within an object. That way modifiers can all be in the same place without us having to assign them.
         public Attribute Strength;
         public Attribute Dexterity;
         public Attribute Constitution;
